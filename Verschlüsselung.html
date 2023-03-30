@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verschlüsselungs- und Entschlüsselungsprogramm</title>
+</head>
+<body>
+  <h1>Verschlüsselungs- und Entschlüsselungsprogramm</h1>
+  <label for="plaintext">Geben Sie den Klartext ein:</label>
+  <input type="text" id="plaintext">
+  <br><br>
+  <button onclick="verschluesseln()">Verschlüsseln</button>
+  <button onclick="entschluesseln()">Entschlüsseln</button>
+  <br><br>
+  <label for="ciphertext">Der verschlüsselte/entschlüsselte Text lautet:</label>
+  <input type="text" id="ciphertext" readonly>
+  
+  <script>
+    function verschluesseln() {
+      var klartext = document.getElementById("plaintext").value;
+      var chiffretext = "";
+      for (var i = 0; i < klartext.length; i++) {
+        var buchstabe = klartext.charAt(i);
+        if (buchstabe >= 'a' && buchstabe <= 'z') {
+          buchstabe = String.fromCharCode(buchstabe.charCodeAt(0) + 1);
+          if (buchstabe > 'z') {
+            buchstabe = 'a';
+          }
+        } else if (buchstabe >= 'A' && buchstabe <= 'Z') {
+          buchstabe = String.fromCharCode(buchstabe.charCodeAt(0) + 1);
+          if (buchstabe > 'Z') {
+            buchstabe = 'A';
+          }
+        }
+        chiffretext += buchstabe;
+      }
+      document.getElementById("ciphertext").value = chiffretext;
+    }
+    
+    function entschluesseln() {
+      var chiffretext = document.getElementById("ciphertext").value;
+      var klartext = "";
+      for (var i = 0; i < chiffretext.length; i++) {
+        var buchstabe = chiffretext.charAt(i);
+        if (buchstabe >= 'a' && buchstabe <= 'z') {
+          buchstabe = String.fromCharCode(buchstabe.charCodeAt(0) - 1);
+          if (buchstabe < 'a') {
+            buchstabe = 'z';
+          }
+        } else if (buchstabe >= 'A' && buchstabe <= 'Z') {
+          buchstabe = String.fromCharCode(buchstabe.charCodeAt(0) - 1);
+          if (buchstabe < 'A') {
+            buchstabe = 'Z';
+          }
+        }
+        klartext += buchstabe;
+      }
+      document.getElementById("plaintext").value = klartext;
+    }
+  </script>
+</body>
+</html>
