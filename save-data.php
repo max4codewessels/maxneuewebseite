@@ -4,10 +4,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST["lastName"];
     $birthdate = $_POST["birthdate"];
 
-    // Hier könntest du die Daten in einer Datei speichern oder in eine Datenbank eintragen.
-    // Zum Zweck dieses Beispiels geben wir die Daten auf der Seite aus.
+    // Pfad zur Textdatei, in der die Daten gespeichert werden sollen
+    $file = "gespeicherte_daten.txt";
 
-    echo "Daten gespeichert: Vorname - $firstName, Nachname - $lastName, Geburtsdatum - $birthdate";
+    // Daten in die Textdatei schreiben (neue Zeile für jede Eingabe)
+    $dataToWrite = "Vorname: $firstName, Nachname: $lastName, Geburtsdatum: $birthdate\n";
+
+    if (file_put_contents($file, $dataToWrite, FILE_APPEND) !== false) {
+        echo "Daten wurden erfolgreich gespeichert.";
+    } else {
+        echo "Fehler beim Speichern der Daten.";
+    }
 } else {
     echo "Ungültige Anfrage";
 }
