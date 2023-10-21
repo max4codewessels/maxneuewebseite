@@ -24,13 +24,13 @@
         <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Login</a>
         <a href="#scroll-tab-2" class="mdl-layout__tab">Kontakt</a>
         <a href="#scroll-tab-3" class="mdl-layout__tab">Klassen infos</a>
-        <a href="#scroll-tab-4" class="mdl-layout__tab"></a>
+        <a href="#scroll-tab-4" class="mdl-layout__tab">Data-take</a>
         <a href="#scroll-tab-5" class="mdl-layout__tab"></a>
         <a href="#scroll-tab-6" class="mdl-layout__tab"></a>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">ERROR 2</span>
+      <span class="mdl-layout-title">Tab</span>
     </div>
     <main class="mdl-layout__content">
       <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
@@ -94,7 +94,34 @@
       <a href="https://webuntis.com/">Studdy plan</a></div>
       </section>
       <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-        <div class="page-content"><!-- Your content goes here --></div>
+        <div class="page-content">
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Daten speichern</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Daten speichern</h1>
+    <form id="dataForm">
+        <label for="firstName">Vorname:</label>
+        <input type="text" id="firstName" required><br>
+        
+        <label for="lastName">Nachname:</label>
+        <input type="text" id="lastName" required><br>
+        
+        <label for="birthdate">Geburtsdatum:</label>
+        <input type="date" id="birthdate" required><br>
+        
+        <button id="saveButton">Speichern</button>
+    </form>
+    <div id="message"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+        </div>
       </section>
       <section class="mdl-layout__tab-panel" id="scroll-tab-5">
         <div class="page-content"><!-- Your content goes here --></div>
