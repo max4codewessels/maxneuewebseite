@@ -122,35 +122,46 @@ schutze<!DOCTYPE html>
 </html>
 
         </div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-        <div class="page-content">
-            const fetch = require('node-fetch'); // Wenn Sie Node.js verwenden
+   <style>
+        body {
+          background-color: yellow;
+        }
+      </style>
+      <hr>
+   <h1>Datenschutzerklärung</h1>
+   <hr>
 
-const url = 'https://www.maxneuewebseite.pages.dev/meine-datei.txt'; // Ersetzen Sie 'meine-datei.txt' durch den tatsächlichen Dateinamen
+Zuletzt aktualisiert am 10.10.2023
 
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Fehler beim Herunterladen der Datei: ${response.status} - ${response.statusText}`);
-    }
-    return response.arrayBuffer();
-  })
-  .then(data => {
-    // Jetzt haben Sie die Datei als ArrayBuffer und können sie speichern oder weiterverarbeiten
-    // In einem Browser können Sie sie zum Beispiel in ein Blob umwandeln und herunterladen
-    const blob = new Blob([data]);
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'meine-datei.txt'; // Hier den Dateinamen festlegen
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-  })
-  .catch(error => {
-    console.error('Fehler:', error);
-  });
+
+
+<h3>1. Welche Informationen wir sammeln</h3>
+
+Name: Wir sammeln Ihren Namen, um Ihre Identität festzustellen und Sie persönlich ansprechen zu können.
+
+E-Mail-Adresse: Ihre E-Mail-Adresse verwenden wir, um mit Ihnen zu kommunizieren, z.B. um Ihnen Updates, Benachrichtigungen oder Marketingmaterialien zuzusenden.
+
+<h3> Wie wir Ihre Informationen verwenden</h3>
+
+Wir verwenden die gesammelten Informationen, einschließlich Ihres Namens und Ihrer E-Mail-Adresse, für folgende Zwecke:
+
+Zur Bereitstellung von Dienstleistungen und Kommunikation im Rahmen unseres Programms.
+
+Zur Verbesserung unserer Dienstleistungen und zur Personalisierung Ihrer Erfahrung.
+
+Zur Zusendung von Mitteilungen über Updates, Angebote, Werbematerialien und andere relevante Informationen.
+
+<h>3. Datensicherheit</h>
+
+Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre persönlichen Informationen vor unbefugtem Zugriff, Nutzung oder Offenlegung zu schützen. Dennoch kann keine Methode der Datenübertragung oder -speicherung als absolut sicher betrachtet werden, und wir können die Sicherheit Ihrer Daten nicht garantieren.
+
+<h3> Weitergabe von Informationen</h3>
+
+Wir werden Ihre persönlichen Informationen nicht an Dritte verkaufen, vermieten oder weitergeben, es sei denn, Sie haben Ihre ausdrückliche Zustimmung gegeben oder es ist gesetzlich erforderlich.
+
+<h3>5. Ihre Rechte</h3>
+
+Sie haben das Recht auf Zugang, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Sie können auch Ihr Einverständnis zur Verarbeitung Ihrer Daten jederzeit widerrufen.
 
         </div>
       </section>
