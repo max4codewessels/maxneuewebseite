@@ -4,162 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MobitMobile</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-<link rel="manifest" href="manifest.json">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
- <!-- Simple header with scrollable tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">MobitMobile®</span>
-      </div>
-      <!-- Tabs -->
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Login</a>
-        <a href="#scroll-tab-2" class="mdl-layout__tab">Kontakt</a>
-        <a href="#scroll-tab-3" class="mdl-layout__tab">Klassen infos</a>
-        <a href="#scroll-tab-4" class="mdl-layout__tab">Data-take</a>
-        <a href="#scroll-tab-5" class="mdl-layout__tab">Datenschutz</a>
-        <a href="#scroll-tab-6" class="mdl-layout__tab"></a>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Tab</span>
-    </div>
-    <main class="mdl-layout__content">
-      <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-        <div class="page-content">
-          <img src="logoM.png" height="150" width="300">
-            <hr>
-          <form>
-            <label for="konto">Konto:</label>
-            <input type="text" id="konto" name="konto"><br><br>
-            <label for="passwort">Passwort:</label>
-            <input type="password" id="passwort" name="passwort"><br><br>
-            <input type="button" value="Anmelden" onclick="weiterleitung()">
-          </form>
-      
-          <script>
-            function weiterleitung() {
-              var konto = document.getElementById("konto").value;
-              var passwort = document.getElementById("passwort").value;
-              if (konto == "Katja" && passwort == "Wessels") {
-                window.location.href = "Katja.Wessels.logged.100debug.html";
-              }
-              else {
-                alert("Sorry, Ungültige Anmeldeinformationen.");
-              }
-            }
-          </script>
-          <hr>
-
-        </body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">MobitMobile®</span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Login</a>
+                <a href="#scroll-tab-2" class="mdl-layout__tab">Kontakt</a>
+                <a href="#scroll-tab-3" class="mdl-layout__tab">Klasseninfos</a>
+                <a href="#scroll-tab-4" class="mdl-layout__tab">Data-take</a>
+                <a href="#scroll-tab-5" class="mdl-layout__tab">Datenschutz</a>
+                <a href="#scroll-tab-6" class="mdl-layout__tab"></a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Tab</span>
         </div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-        <div class="page-content">   
-           <h1 id="up">Kontakt</h1>
-          <fieldset>
-             <legend>Anmerkung/-en zu kontakt daten</legend>
-             <p>
-              wenn sie mit etwas nicht einverstanden sind melden sie sich bitte per e-mail oder per telefon (unten verlinkt!)
-             </p>
-          </fieldset>
-          <br>
-          <br>
-          <fieldset>
-              <legend>Kontakt</legend>
-              telefon:0163347****(für diese Daten bitte anmelden)
-              <br>
-              e-mail: wm9360@couvengym.onmicrosoft.com
-          </fieldset>
-      
-          <br>
-          <hr>
-      &copy;</div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-        <div class="page-content">  
-            <h3>Deutsch Arbeit</h3>
-            <button>4.9.23</button>
-            <br>
-    <a href="https://anton.app/de/">Lernen</a>
-          <br>
-      <a href="https://webuntis.com/">Studdy plan</a></div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-        <div class="page-content">
-            <!DOCTYPE html>
-<html>
-<head>
-    <title>Daten speichern</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h1>Daten speichern</h1>
-    <form id="dataForm">
-        <label for="firstName">Vorname:</label>
-        <input type="text" id="firstName" required><br>
-        
-        <label for="lastName">Nachname:</label>
-        <input type="text" id="lastName" required><br>
-        
-        <label for="birthdate">Geburtsdatum:</label>
-        <input type="date" id="birthdate" required><br>
-        
-        <button id="saveButton">Speichern</button>
-    </form>
-    <div id="message"></div>2
-    
-    <script src="script.js"></script>
-</body>
-</html>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <img src="logoM.png" height="150" width="300">
+                    <hr>
+                    <form>
+                        <label for="konto">Konto:</label>
+                        <input type="text" id="konto" name="konto"><br><br>
+                        <label for="passwort">Passwort:</label>
+                        <input type="password" id="passwort" name="passwort"><br><br>
+                        <input type="button" value="Anmelden" onclick="weiterleitung()">
+                    </form>
+                    <script>
+                        function weiterleitung() {
+                            var konto = document.getElementById("konto").value;
+                            var passwort = document.getElementById("passwort").value;
+                            if (konto == "Katja" && passwort == "Wessels") {
+                                window.location.href = "Katja.Wessels.logged.100debug.html";
+                            }
+                            else {
+                                alert("Sorry, ungültige Anmeldeinformationen.");
+                            }
+                        }
+                    </script>
+                    <hr>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content">
+                    <h1 id="up">Kontakt</h1>
+                    <fieldset>
+                        <legend>Anmerkung/-en zu Kontaktdaten</legend>
+                        <p>
+                            Wenn Sie mit etwas nicht einverstanden sind, melden Sie sich bitte per E-Mail oder per Telefon (unten verlinkt!).
+                        </p>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Kontakt</legend>
+                        Telefon: 0163347**** (für diese Daten bitte anmelden)<br>
+                        E-Mail: wm9360@couvengym.onmicrosoft.com
+                    </fieldset>
+                    <br>
+                    <hr>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+                <div class="page-content">
+                    <h3>Deutsch Arbeit</h3>
+                    <button>4.9.23</button><br>
+                    <a href="https://anton.app/de/">Lernen</a><br>
+                    <a href="https://webuntis.com/">Stundenplan</a>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+                <div class="page-content">
+                    <h1>Daten speichern</h1>
+                    <form id="dataForm">
+                        <label for="firstName">Vorname:</label>
+                        <input type="text" id="firstName" required><br>
+                        <label for="lastName">Nachname:</label>
+                        <input type="text" id="lastName" required><br>
+                        <label for="birthdate">Geburtsdatum:</label>
+                        <input type="date" id="birthdate" required><br>
+                        <button id="saveButton">Speichern</button>
+                    </form>
+                    <div id="message"></div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+                <div class="page-content">
+                    <h1>Datenschutzerklärung</h1>
+                    <hr>
+                    Zuletzt aktualisiert am 10.10.2023
+                    <h3>1. Welche Informationen wir sammeln</h3>
+                    Name: Wir sammeln Ihren Namen, um Ihre Identität festzustellen und Sie persönlich ansprechen zu können.
+                    E-Mail-Adresse: Ihre E-Mail-Adresse verwenden wir, um mit Ihnen zu kommunizieren, z.B. um Ihnen Updates, Benachrichtigungen oder Marketingmaterialien zuzusenden.
+                    <h3>Wie wir Ihre Informationen verwenden</h3>
+                    Wir verwenden die gesammelten Informationen, einschließlich Ihres Namens und Ihrer E-Mail-Adresse, für folgende Zwecke:
+                    Zur Bereitstellung von Dienstleistungen und Kommunikation im Rahmen unseres Programms
 
-        </div>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-        <div class="page-content">
-            google test
-        
-   <h1>Datenschutzerklärung</h1>
-   <hr>
 
-Zuletzt aktualisiert am 10.10.2023
+                    Zur Verbesserung unserer Dienstleistungen und zur Personalisierung Ihrer Erfahrung.
 
+                    Zur Zusendung von Mitteilungen über Updates, Angebote, Werbematerialien und andere relevante Informationen.
 
+                    <h>3. Datensicherheit</h>
 
-<h3>1. Welche Informationen wir sammeln</h3>
+                    Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre persönlichen Informationen vor unbefugtem Zugriff, Nutzung oder Offenlegung zu schützen. Dennoch kann keine Methode der Datenübertragung oder -speicherung als absolut sicher betrachtet werden, und wir können die Sicherheit Ihrer Daten nicht garantieren.
 
-Name: Wir sammeln Ihren Namen, um Ihre Identität festzustellen und Sie persönlich ansprechen zu können.
+                    <h3> Weitergabe von Informationen</h3>
 
-E-Mail-Adresse: Ihre E-Mail-Adresse verwenden wir, um mit Ihnen zu kommunizieren, z.B. um Ihnen Updates, Benachrichtigungen oder Marketingmaterialien zuzusenden.
+                    Wir werden Ihre persönlichen Informationen nicht an Dritte verkaufen, vermieten oder weitergeben, es sei denn, Sie haben Ihre ausdrückliche Zustimmung gegeben oder es ist gesetzlich erforderlich.
 
-<h3> Wie wir Ihre Informationen verwenden</h3>
+                    <h3>5. Ihre Rechte</h3>
 
-Wir verwenden die gesammelten Informationen, einschließlich Ihres Namens und Ihrer E-Mail-Adresse, für folgende Zwecke:
-
-Zur Bereitstellung von Dienstleistungen und Kommunikation im Rahmen unseres Programms.
-
-Zur Verbesserung unserer Dienstleistungen und zur Personalisierung Ihrer Erfahrung.
-
-Zur Zusendung von Mitteilungen über Updates, Angebote, Werbematerialien und andere relevante Informationen.
-
-<h>3. Datensicherheit</h>
-
-Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre persönlichen Informationen vor unbefugtem Zugriff, Nutzung oder Offenlegung zu schützen. Dennoch kann keine Methode der Datenübertragung oder -speicherung als absolut sicher betrachtet werden, und wir können die Sicherheit Ihrer Daten nicht garantieren.
-
-<h3> Weitergabe von Informationen</h3>
-
-Wir werden Ihre persönlichen Informationen nicht an Dritte verkaufen, vermieten oder weitergeben, es sei denn, Sie haben Ihre ausdrückliche Zustimmung gegeben oder es ist gesetzlich erforderlich.
-
-<h3>5. Ihre Rechte</h3>
-
-Sie haben das Recht auf Zugang, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Sie können auch Ihr Einverständnis zur Verarbeitung Ihrer Daten jederzeit widerrufen.
+                    Sie haben das Recht auf Zugang, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Sie können auch Ihr Einverständnis zur Verarbeitung Ihrer Daten jederzeit widerrufen.
 
         </div>
       </section>
